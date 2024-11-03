@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas
 
 st.set_page_config(layout='wide')
 col1,col2=st.columns(2)
@@ -20,3 +21,14 @@ with col2:
 content2="""Below you can find some of the apps I have built in Python. Feel free to browse my portfolio and reach 
 out if you’d like to collaborate or just chat about all things web development!"""
 st.write(content2)
+
+col3,col4=st.columns(2)
+with col3:
+    df=pandas.read_csv('data.csv',sep=';')
+    for index,row in df[:10].iterrows():
+        st.header(row['title'])
+
+with col4:
+    df=pandas.read_csv('data.csv',sep=';')
+    for index,row in df[10:].iterrows():
+        st.header(row['title'])
