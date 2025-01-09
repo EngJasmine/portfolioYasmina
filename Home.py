@@ -10,10 +10,13 @@ with col1:
 with col2:
     st.title("Yasmina NASRI")
     content = """
-    Hi, I am Yasmina ! I am a python programmer. Graduated in 2011 with a Master in Communication systems from National School of Engineers of Tunis (ENIT).
-    I worked as a software programmer for 4 years, with a background in Oracle forms and reports and PL/SQL and a solid understanding
-    of software development principles.Recently completed upskilling focusing on Python and Web development, with coursework in HTML, CSS, JavaScript,
-    Angular, and mobile development. You can find me exploring new technologies, contributing to open-source projects. I’m always eager to learn and 
+    Hi, I am Yasmina ! I am a Software programmer with four years of experience 
+    with a background in Oracle forms and reports and PL/SQL and a solid 
+    understanding of software development principles. Recently completed 
+    upskilling focusing on Python and Web development, 
+    with coursework in HTML, CSS, JavaScript, Networking, and IT Technical 
+    Support. You can find me exploring new technologies, 
+    contributing to open-source projects. I’m always eager to learn and 
     take on new challenges in the tech world. 
     """
 
@@ -27,7 +30,7 @@ st.write(content2)
 col3,empty_col,col4=st.columns([1.5, 0.5, 1.5])
 with col3:
     df=pandas.read_csv('data.csv',sep=';')
-    for index,row in df[:10].iterrows():
+    for index,row in df[:7].iterrows():
         st.header(row['title'])
         st.write(row['description'])
         st.image('images/'+row['image'])
@@ -35,7 +38,7 @@ with col3:
 
 with col4:
     df=pandas.read_csv('data.csv',sep=';')
-    for index,row in df[10:].iterrows():
+    for index,row in df[8:].iterrows():
         st.header(row['title'])
         st.write(row['description'])
         st.image('images/' + row['image'])

@@ -1,5 +1,6 @@
 import smtplib
 import ssl
+import os
 
 
 def send_email(message):
@@ -7,7 +8,8 @@ def send_email(message):
     host = "smtp.gmail.com"
     port = 465
     username = "reema5khamassi@gmail.com"
-    password = "ildt ermu tozq spci"  # Use an App Password if you have 2FA enabled
+    password = os.getenv("PASSWORD")  # Use an App Password if you have 2FA enabled
+    print(password)
     # Recipient email
     receiver = 'reema5khamassi@gmail.com'
 
